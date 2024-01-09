@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: rgb(247, 227, 207);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .result {
+            font-size: 1.5rem;
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>
+        Fill out the info below to get the current weather in your area...
+    </h1>
+
+    <% if (locals.data) {%>
+        <div class="result">
+            <%=weatherDesc.charAt(0).toUpperCase() + weatherDesc.slice(1) %>, <%=temperature %>°F in <%=cityName %>,
+                        <%=stateName %> (<%=countryName %>).
+        </div>
+        <% } %>
+
+            <% if (locals.error) { %>
+                <p>
+                    <!-- Show any errors that were sent from the backend -->
+                    <%=error %>
+                </p>
+                <% } %>
+
+                    <form id="myForm" method="post">
+                        <label for="cityBox">City:</label>
+                        <input type="text" id="cityBox" name="city">
+                        <label for="stateBox">State:</label>
+                        <input type="text" id="stateBox" name="state">
+                        <label for="countryBox">Country:</label>
+                        <input type="text" id="countryBox" name="country">
+
+                        <input id="get" type="submit" value="Get Weather" formaction="/get-weather">
+                    </form>
+
+</body>
+
+</html>
