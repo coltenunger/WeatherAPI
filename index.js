@@ -9,6 +9,7 @@ const API_KEY = process.env.API_KEY;
 
 // USING STATEMENTS
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
     res.render("index.ejs");
@@ -18,7 +19,7 @@ app.post('/get-weather', async (req, res) => {
     try {
         const city = req.body.city;
         const state = req.body.state;
-        const country = req.body.country;
+        const country = 'US';
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city},${state},${country}&limit=1&units=imperial&appid=${API_KEY}`);
         res.render("index.ejs", {
             data: response.data,
