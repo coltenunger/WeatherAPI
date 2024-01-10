@@ -38,6 +38,12 @@ app.get('/get-weather', async (req, res) => {
 })
 
 
+// Temporary endpoint while adding styling
+// app.get('/get-weather', async (req, res) => {
+//     res.render('weather.ejs');
+// });
+
+
 app.listen(port, () => {
     console.log(`Server running on port: ${port}`);
 });

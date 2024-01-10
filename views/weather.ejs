@@ -2,20 +2,113 @@
 
     <div class="mesh-bg">
 
-        <% if (locals.data) {%>
-            <div class="result">
-                <%=weatherDesc %>, <%=temperature %>°F in
-                        <%=cityName %>,
-                            <%=stateName %> (<%=countryName %>).
-            </div>
-            <% } %>
 
-                <% if (locals.error) { %>
-                    <p>
-                        <!-- Show any errors that were sent from the backend -->
-                        <%=error %>
-                    </p>
-                    <% } %>
+        <div class="arrow-container">
+            <a href="/">
+                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="m9.55 12l7.35 7.35q.375.375.363.875t-.388.875q-.375.375-.875.375t-.875-.375l-7.7-7.675q-.3-.3-.45-.675t-.15-.75q0-.375.15-.75t.45-.675l7.7-7.7q.375-.375.888-.363t.887.388q.375.375.375.875t-.375.875z" />
+                </svg>
+            </a>
+        </div>
+
+        <div class="weather-container">
+
+            <div class="header-content">
+                <div class="city-title">New York, NY</div>
+                <div class="date-title">Friday, 20 January</div>
+                <div class="weather-condition">Sunny</div>
+                <div class="temperature">28°</div>
+            </div>
+
+            <div class="long-box">
+                <div class="weather-item">
+                    <svg class="weather-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                        viewBox="0 0 256 256">
+                        <path fill="currentColor"
+                            d="M34.33 77.68a8 8 0 0 1 0-11.34C35.1 65.59 53.1 48 88 48c18.42 0 32.24 9.21 44.44 17.34C143.74 72.88 154.42 80 168 80a72.21 72.21 0 0 0 31.75-6.83a44.87 44.87 0 0 0 10.63-6.87a8 8 0 0 1 11.27 11.36C220.9 78.41 202.9 96 168 96c-18.42 0-32.24-9.21-44.44-17.34C112.26 71.12 101.58 64 88 64a72.21 72.21 0 0 0-31.75 6.83a44.87 44.87 0 0 0-10.63 6.87a8 8 0 0 1-11.29-.02m176.05 44.62a44.87 44.87 0 0 1-10.63 6.87A72.21 72.21 0 0 1 168 136c-13.58 0-24.26-7.12-35.56-14.66C120.24 113.21 106.42 104 88 104c-34.9 0-52.9 17.59-53.65 18.34a8 8 0 0 0 11.27 11.36a44.87 44.87 0 0 1 10.63-6.87A72.21 72.21 0 0 1 88 120c13.58 0 24.26 7.12 35.56 14.66c12.2 8.13 26 17.34 44.44 17.34c34.9 0 52.9-17.59 53.65-18.34a8 8 0 0 0-11.27-11.36m0 56a44.87 44.87 0 0 1-10.63 6.87A72.21 72.21 0 0 1 168 192c-13.58 0-24.26-7.12-35.56-14.66C120.24 169.21 106.42 160 88 160c-34.9 0-52.9 17.59-53.65 18.34a8 8 0 0 0 11.27 11.36a44.87 44.87 0 0 1 10.63-6.87A72.21 72.21 0 0 1 88 176c13.58 0 24.26 7.12 35.56 14.66c12.2 8.13 26 17.34 44.44 17.34c34.9 0 52.9-17.59 53.65-18.34a8 8 0 0 0-11.27-11.36" />
+                    </svg>
+                    <div class="info">1.5m/h</div>
+                    <div class="criteria">Wind</div>
+                </div>
+                <div class="weather-item">
+                    <svg class="weather-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                        viewBox="0 0 16 16">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M12.5 9a4.5 4.5 0 1 1-9 0c0-1.638.761-3.242 1.789-4.64a16.57 16.57 0 0 1 2.714-2.847c.591.48 1.722 1.483 2.707 2.817c1.024 1.389 1.79 3 1.79 4.67M14 9A6 6 0 0 1 2 9C2 4.819 5.846 1.337 7.106.309C7.359.102 7.676 0 8.003 0c.323 0 .637.1.888.302C10.148 1.312 14 4.759 14 9m-6 3.25a.75.75 0 0 1 0-1.5A1.75 1.75 0 0 0 9.75 9a.75.75 0 0 1 1.5 0A3.25 3.25 0 0 1 8 12.25"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <div class="info">62%</div>
+                    <div class="criteria">Humidity</div>
+                </div>
+                <div class="weather-item">
+                    <svg class="weather-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                        viewBox="0 0 14 14">
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M13.23 6.33a1 1 0 0 1 0 1.34C12.18 8.8 9.79 11 7 11S1.82 8.8.77 7.67a1 1 0 0 1 0-1.34C1.82 5.2 4.21 3 7 3s5.18 2.2 6.23 3.33Z" />
+                            <circle cx="7" cy="7" r="2" />
+                        </g>
+                    </svg>
+                    <div class="info">0.5m</div>
+                    <div class="criteria">Visibility</div>
+                </div>
+            </div>
+
+            <div class="forecast-span">
+                <div class="forecast-option">4 Day Forecast</div>
+                <a href="">
+                    <svg class="forecast-arrow" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                        viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5" d="m18 8l4 4m0 0l-4 4m4-4H2" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="grid-container">
+                <div class="grid-item">
+                    <div class="forecast-temp">27°</div>
+                    <svg class="forecast-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="32"
+                        viewBox="0 0 384 512">
+                        <path fill="currentColor"
+                            d="M192 512C86 512 0 426 0 320C0 228.8 130.2 57.7 166.6 11.7c6-7.5 14.9-11.7 24.5-11.7h1.8c9.6 0 18.5 4.2 24.5 11.7C253.8 57.7 384 228.8 384 320c0 106-86 192-192 192M96 336c0-8.8-7.2-16-16-16s-16 7.2-16 16c0 61.9 50.1 112 112 112c8.8 0 16-7.2 16-16s-7.2-16-16-16c-44.2 0-80-35.8-80-80" />
+                    </svg>
+                    <div class="forecast-date">21 Jan</div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="forecast-temp">25°</div>
+                    <svg class="forecast-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m18.35 19.775l-1.4-1.425q-.275-.3-.275-.712t.275-.688q.275-.275.688-.275t.712.275l1.425 1.4q.3.3.3.713t-.3.712q-.3.3-.712.3t-.713-.3M6 20q-1.65 0-2.825-1.175T2 16q0-1.65 1.175-2.825T6 12q1.2 0 2.213.65t1.462 1.775l.25.575h.6q1.05 0 1.763.725T13 17.5q0 1.05-.725 1.775T10.5 20zm8.975-2.8q-.1-1.575-1.137-2.725t-2.613-1.425q-.775-1.35-2.087-2.137T6.25 10q.65-1.825 2.225-2.912T12 6q2.5 0 4.25 1.75T18 12q0 1.625-.8 3.013T14.975 17.2M20 13q-.425 0-.712-.288T19 12q0-.425.288-.712T20 11h2q.425 0 .713.288T23 12q0 .425-.288.713T22 13zM5.65 7.05L4.225 5.625q-.275-.275-.275-.7t.275-.7q.3-.3.713-.3t.712.3l1.4 1.425q.275.3.275.713t-.275.687q-.275.275-.7.275t-.7-.275m11.3 0q-.275-.275-.275-.687t.275-.713l1.4-1.425q.3-.3.713-.3t.712.3q.275.275.275.7t-.275.7L18.35 7.05q-.275.275-.7.275t-.7-.275M12 5q-.425 0-.712-.288T11 4V2q0-.425.288-.712T12 1q.425 0 .713.288T13 2v2q0 .425-.288.713T12 5" />
+                    </svg>
+                    <div class="forecast-date">22 Jan</div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="forecast-temp">24°</div>
+                    <svg class="forecast-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M6.5 20q-2.275 0-3.887-1.575T1 14.575q0-1.95 1.175-3.475T5.25 9.15q.625-2.3 2.5-3.725T12 4q2.925 0 4.963 2.038T19 11q1.725.2 2.863 1.488T23 15.5q0 1.875-1.312 3.188T18.5 20z" />
+                    </svg>
+                    <div class="forecast-date">23 Jan</div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="forecast-temp">28°</div>
+                    <svg class="forecast-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                        viewBox="0 0 256 256">
+                        <path fill="currentColor"
+                            d="m213.85 125.46l-112 120a8 8 0 0 1-13.69-7l14.66-73.33l-57.63-21.64a8 8 0 0 1-3-13l112-120a8 8 0 0 1 13.69 7l-14.7 73.41l57.63 21.61a8 8 0 0 1 3 12.95Z" />
+                    </svg>
+                    <div class="forecast-date">24 Jan</div>
+                </div>
+
+            </div>
+        </div>
 
     </div>
 
