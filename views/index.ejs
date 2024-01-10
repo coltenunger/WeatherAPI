@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather API</title>
     <link rel="stylesheet" href="/styles/main.css">
+    <!-- ICONIFY CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
+        integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
     <div class="container">
-        <h1>
-            Fill out the info below to get the current weather in your area...
-        </h1>
+        <div class="logo-container">
+            <div class="logo-header">Weatherby</div>
+            <img src="/assets/images/WBlogo(1).svg" alt="Weatherby logo">
+        </div>
 
         <% if (locals.data) {%>
             <div class="result">
-                <%=weatherDesc.charAt(0).toUpperCase() + weatherDesc.slice(1) %>, <%=Math.round(temperature) %>°F in
+                <%=weatherDesc %>, <%=temperature %>°F in
                         <%=cityName %>,
                             <%=stateName %> (<%=countryName %>).
             </div>
@@ -29,11 +34,12 @@
                     </p>
                     <% } %>
 
-                        <form class="form_flex" id="myForm" method="post">
-                            <label for="cityBox">City:</label>
-                            <input type="text" id="cityBox" name="city">
-                            <label for="stateBox">State:</label>
-                            <input type="text" id="stateBox" name="state">
+                        <form class="form-flex" id="myForm" method="get">
+                            <label for="cityBox">City</label>
+                            <input type="text" id="cityBox" name="city" value="<%=locals.cityName %>">
+
+                            <label for="stateBox">State</label>
+                            <input type="text" id="stateBox" name="state" value="<%=locals.stateName %>">
 
                             <input id="get" type="submit" value="Get Weather" formaction="/get-weather">
                         </form>
@@ -60,6 +66,12 @@
         </div>
     </div>
 
+    <footer>
+        <div class="footer-info1">Built and designed by
+            <a href="https://coltenunger.com/" target="_blank" style="text-decoration: underline;">Colten Unger</a>
+        </div>
+        <div class="footer-info2">* Currently only works for places in the US</div>
+    </footer>
 
 </body>
 

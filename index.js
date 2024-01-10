@@ -15,22 +15,25 @@ app.get("/", (req, res) => {
     res.render("index.ejs");
 });
 
-app.post('/get-weather', async (req, res) => {
+app.get('/get-weather', async (req, res) => {
     try {
-        const city = req.body.city;
-        const state = req.body.state;
-        const country = 'US';
-        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city},${state},${country}&limit=1&units=imperial&appid=${API_KEY}`);
-        res.render("index.ejs", {
+        const city = req.query.city;
+        const state = req.query.state;
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city},${state}&limit=1&units=imperial&appid=${API_KEY}`);
+        const tempRaw = response.data.main.temp;
+        const tempRound = Math.round(tempRaw);
+        const weatherRaw = response.data.weather[0].description;
+        const weatherUpper = weatherRaw.charAt(0).toUpperCase() + weatherRaw.slice(1)
+        res.render("weather.ejs", {
             data: response.data,
-            weatherDesc: response.data.weather[0].description,
+            weatherDesc: weatherUpper,
             cityName: response.data.name,
             stateName: state,
             countryName: response.data.sys.country,
-            temperature: response.data.main.temp
+            temperature: tempRound
         });
     } catch (error) {
-        res.render("index.ejs", { error: JSON.stringify(error.response.data) });
+        res.render("weather.ejs", { error: JSON.stringify(error.response.data) });
     }
 })
 

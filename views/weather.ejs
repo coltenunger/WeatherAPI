@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="logo-container">
+        <div class="logo-header">Weatherby</div>
+        <img src="/assets/images/WBlogo(1).svg" alt="Weatherby logo">
+    </div>
+
+    <% if (locals.data) {%>
+        <div class="result">
+            <%=weatherDesc %>, <%=temperature %>°F in
+                    <%=cityName %>,
+                        <%=stateName %> (<%=countryName %>).
+        </div>
+        <% } %>
+
+            <% if (locals.error) { %>
+                <p>
+                    <!-- Show any errors that were sent from the backend -->
+                    <%=error %>
+                </p>
+                <% } %>
+
+                    <form class="form-flex" id="myForm" method="get">
+                        <label for="cityBox">City</label>
+                        <input type="text" id="cityBox" name="city" value="<%=locals.cityName %>">
+
+                        <label for="stateBox">State</label>
+                        <input type="text" id="stateBox" name="state" value="<%=locals.stateName %>">
+
+                        <input id="get" type="submit" value="Get Weather" formaction="/get-weather">
+                    </form>
+</div>
+
+<footer>
+    <div class="footer-info1">Built and designed by
+        <a href="https://coltenunger.com/" target="_blank" style="text-decoration: underline;">Colten Unger</a>
+    </div>
+    <div class="footer-info2">* Currently only works for places in the US</div>
+</footer>
