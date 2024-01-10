@@ -1,6 +1,6 @@
 <%- include("partials/header.ejs") %>
 
-    <div class="container" style="background-color: beige;">
+    <div class="mesh-bg">
         <div class="logo-container">
             <div class="logo-header">Weatherby</div>
             <img src="/assets/images/WBlogo(1).svg" alt="Weatherby logo">
@@ -21,15 +21,6 @@
                     </p>
                     <% } %>
 
-                        <form class="form-flex" id="myForm" method="get">
-                            <label for="cityBox">City</label>
-                            <input type="text" id="cityBox" name="city" value="<%=locals.cityName %>">
-
-                            <label for="stateBox">State</label>
-                            <input type="text" id="stateBox" name="state" value="<%=locals.stateName %>">
-
-                            <input id="get" type="submit" value="Get Weather" formaction="/get-weather">
-                        </form>
     </div>
 
     </body>

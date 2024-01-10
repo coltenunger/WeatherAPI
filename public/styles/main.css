@@ -24,9 +24,31 @@
       z-index: 1;
   }
 
+  .mesh-bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      z-index: 1;
+
+      background-color: hsla(225, 92%, 40%, 1);
+      background-image:
+          radial-gradient(at 59% 3%, hsla(215, 100%, 53%, 1) 0px, transparent 50%),
+          radial-gradient(at 100% 0%, hsla(196, 100%, 32%, 1) 0px, transparent 50%),
+          radial-gradient(at 0% 52%, hsla(228, 61%, 55%, 1) 0px, transparent 50%),
+          radial-gradient(at 46% 92%, hsla(215, 87%, 35%, 1) 0px, transparent 50%),
+          radial-gradient(at 0% 100%, hsla(198, 100%, 70%, 1) 0px, transparent 50%),
+          radial-gradient(at 0% 1%, hsla(255, 94%, 66%, 1) 0px, transparent 50%),
+          radial-gradient(at 100% 100%, hsla(173, 100%, 81%, 1) 0px, transparent 50%);
+  }
+
   .logo-container {
       position: absolute;
-      top: 6rem;
+      top: 3rem;
       display: flex;
       justify-content: start;
       align-items: center;
@@ -34,12 +56,81 @@
   }
 
   .logo-header {
+      color: black;
       font-size: 70px;
   }
 
   .form-flex {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      width: 40%;
+      gap: 2rem;
+  }
+
+  .input-group {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .input-label {
+      font-size: 2rem;
+      font-weight: 300;
+      color: #8bffff;
+      margin-bottom: .5rem;
+  }
+
+  .inputBox {
+      border: 2px solid white;
+      border-radius: 10px;
+      opacity: .7;
+      padding: 1rem;
+      transition: opacity ease .3s;
+  }
+
+  .inputBox:focus {
+      opacity: 1;
+      outline: none;
+  }
+
+  input,
+  input::placeholder {
+      font: 1.2rem 'Inter', sans-serif;
+      color: rgba(255, 255, 255, .7);
+  }
+
+  select:focus {
+      background-color: transparent;
+  }
+
+  input {
+      background: transparent;
+      color: white;
+  }
+
+  .search-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .3rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.3rem;
+      color: white;
+      background: linear-gradient(270deg, #7989DE 0%, #79E4F7 100%);
+      border-radius: 30px;
+      border: none;
+      padding: .9rem;
+      transition: transform ease .3s;
+  }
+
+  .search-button:hover {
+      cursor: pointer;
+      transform: scale(1.03);
+  }
+
+  .search-button:active {
+      transform: scale(1);
   }
 
   .result {
@@ -51,11 +142,19 @@
   .footer-info1 {
       font-size: 16px;
       position: absolute;
-      left: 20px;
+      left: 1.25rem;
       bottom: 15px;
       z-index: 2;
   }
 
+  .footer-info2 {
+      color: white;
+      font-size: 12px;
+      position: absolute;
+      right: 1.25rem;
+      bottom: 15px;
+      z-index: 2;
+  }
 
 
 

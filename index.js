@@ -19,7 +19,7 @@ app.get('/get-weather', async (req, res) => {
     try {
         const city = req.query.city;
         const state = req.query.state;
-        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city},${state}&limit=1&units=imperial&appid=${API_KEY}`);
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city},${state},US&limit=1&units=imperial&appid=${API_KEY}`);
         const tempRaw = response.data.main.temp;
         const tempRound = Math.round(tempRaw);
         const weatherRaw = response.data.weather[0].description;
