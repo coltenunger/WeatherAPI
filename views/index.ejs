@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include("partials/header.ejs") %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather API</title>
-    <link rel="stylesheet" href="/styles/main.css">
-    <!-- ICONIFY CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
-        integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
-
-<body>
     <div class="container">
         <div class="logo-container">
             <div class="logo-header">Weatherby</div>
@@ -66,13 +53,4 @@
         </div>
     </div>
 
-    <footer>
-        <div class="footer-info1">Built and designed by
-            <a href="https://coltenunger.com/" target="_blank" style="text-decoration: underline;">Colten Unger</a>
-        </div>
-        <div class="footer-info2">* Currently only works for places in the US</div>
-    </footer>
-
-</body>
-
-</html>
+    <%- include("partials/footer.ejs") %>
