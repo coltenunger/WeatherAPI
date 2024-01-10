@@ -1,4 +1,2 @@
-# dotenv environment variable files
 .env
-
 .DS_Store
