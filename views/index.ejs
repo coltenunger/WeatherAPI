@@ -1,6 +1,6 @@
 <%- include("partials/header.ejs") %>
 
-    <div class="container">
+    <div class="absolute-container">
         <div class="logo-container">
             <div class="logo-header">
                 Weatherby<img width="84px" src="/assets/images/WBlogo(1).svg" alt="Weatherby logo">
@@ -8,43 +8,27 @@
             <div class="tagline">at your service</div>
         </div>
 
-        <% if (locals.data) {%>
-            <div class="result">
-                <%=weatherDesc %>, <%=temperature %>°F in
-                        <%=cityName %>,
-                            <%=stateName %> (<%=countryName %>).
+        <form class="form-flex" id="myForm" method="get">
+            <div class="input-group">
+                <label class="input-label" for="cityBox">City</label>
+                <input class="inputBox" type="text" placeholder="eg. Paris" name="city" value="<%=locals.cityName %>"
+                    autocomplete="off">
             </div>
-            <% } %>
+            <div class="input-group">
+                <label class="input-label" for="countryBox">Country</label>
+                <input class="inputBox" type="text" placeholder="eg. France" name="country"
+                    value="<%=locals.countryName %>" autocomplete="off">
+            </div>
 
-                <% if (locals.error) { %>
-                    <p>
-                        <!-- Show any errors that were sent from the backend -->
-                        <%=error %>
-                    </p>
-                    <% } %>
+            <button class="search-button" type="submit" formaction="/get-weather">
+                Search <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    viewBox="0 0 256 256">
+                    <path fill="currentColor"
+                        d="M232.49 215.51L185 168a92.12 92.12 0 1 0-17 17l47.53 47.54a12 12 0 0 0 17-17ZM44 112a68 68 0 1 1 68 68a68.07 68.07 0 0 1-68-68" />
+                </svg>
+            </button>
 
-                        <form class="form-flex" id="myForm" method="get">
-                            <div class="input-group">
-                                <label class="input-label" for="cityBox">City</label>
-                                <input class="inputBox" type="text" placeholder="eg. Paris" name="city"
-                                    value="<%=locals.cityName %>" autocomplete="off">
-                            </div>
-                            <div class="input-group">
-                                <label class="input-label" for="stateBox">State</label>
-                                <input class="inputBox" type="text" placeholder="eg. France" name="state"
-                                    value="<%=locals.stateName %>" autocomplete="off">
-                            </div>
-
-                            <!-- <input id="get" type="submit" value="Get Weather" formaction="/get-weather"> -->
-                            <button class="search-button" type="submit" formaction="/get-weather">
-                                Search <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="32"
-                                    height="32" viewBox="0 0 256 256">
-                                    <path fill="currentColor"
-                                        d="M232.49 215.51L185 168a92.12 92.12 0 1 0-17 17l47.53 47.54a12 12 0 0 0 17-17ZM44 112a68 68 0 1 1 68 68a68.07 68.07 0 0 1-68-68" />
-                                </svg>
-                            </button>
-
-                        </form>
+        </form>
     </div>
 
     <div class="gradient-bg">

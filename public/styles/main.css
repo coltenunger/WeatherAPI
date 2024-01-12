@@ -12,7 +12,7 @@
       text-decoration: none;
   }
 
-  .container {
+  .absolute-container {
       position: absolute;
       left: 0;
       right: 0;
@@ -25,18 +25,15 @@
   }
 
   .mesh-bg {
+      overflow: hidden;
       position: absolute;
       left: 0;
       right: 0;
+      /* bottom: 0;
+      top: 0;
       margin-left: 0;
       margin-right: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 100vh;
-      z-index: 1;
-
+      z-index: -1; */
       background-color: hsla(225, 92%, 40%, 1);
       background-image:
           radial-gradient(at 59% 3%, hsla(215, 100%, 53%, 1) 0px, transparent 50%),
@@ -171,6 +168,14 @@
       z-index: 2;
   }
 
+  .static-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+  }
+
   .arrow-container {
       position: absolute;
       top: 1.25rem;
@@ -181,60 +186,69 @@
       width: inherit;
   }
 
-  .weather-container {
+  .weather-wrapper {
       display: flex;
-      /* justify-content: center; */
-      align-items: center;
+      /* justify-content: inherit; */
+      align-items: inherit;
       flex-direction: column;
-      height: 100vh;
-      width: 40%;
+      width: 660px;
   }
 
   .header-content {
-      text-align: center;
-      padding: 2rem 4rem 1.5rem 4rem;
+      display: flex;
+      align-items: center;
+      flex-direction: inherit;
+      padding: 1rem;
   }
 
   .city-title {
-      font-size: 1.8rem;
+      font-size: 2.5rem;
       font-weight: 700;
       margin-bottom: 2rem;
   }
 
   .date-title {
-      font-size: 1.1rem;
-      background-color: black;
-      color: white;
-      padding: .4rem;
+      width: fit-content;
+      font-size: 1.2rem;
+      padding: 8px 16px 8px 16px;
       border-radius: 30px;
+      color: white;
+      background-color: black;
   }
 
   .weather-condition {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       font-weight: 600;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
+      margin-top: 1.2rem;
+      margin-bottom: 1.5rem;
   }
 
   .temperature {
       font-weight: 500;
-      font-size: 6rem;
+      font-size: 10rem;
   }
 
-  .long-box {
+  .rectangular-box {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      padding: 1rem;
       width: 100%;
-      color: white;
-      background-color: black;
+      height: 100%;
+      flex-shrink: 3;
+      height: fit-content;
       border-radius: 10px;
+      background-color: black;
+      color: white;
+      padding: 2.2rem 1rem 2.2rem 1rem;
   }
 
   .weather-item {
+      flex-shrink: 1;
+      /* width: 220px; */
       display: flex;
       align-items: center;
       flex-direction: column;
-      padding: 1.2rem 2rem 1.2rem 2rem;
+      /* padding: 1.2rem 2rem 1.2rem 2rem; */
       margin: 1.2rem 2rem 1.2rem 2rem;
   }
 
@@ -254,58 +268,7 @@
       font-size: 1.1rem;
   }
 
-  .forecast-span {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      padding: .5rem 0 0 0;
-  }
 
-  .forecast-option {
-      font-size: 1.4rem;
-      font-weight: 600;
-  }
-
-  .forecast-arrow {
-      visibility: hidden;
-      width: 55px;
-      height: 55px;
-  }
-
-  .grid-container {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      gap: 3rem;
-  }
-
-  .grid-item {
-      display: inherit;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      border: 2px solid black;
-      border-radius: 10px;
-      background: transparent;
-      width: 100%;
-      padding: 1rem .5rem 1rem .5rem;
-  }
-
-  .forecast-temp {
-      font-size: 1.25rem;
-      font-weight: 500;
-  }
-
-  .forecast-icon {
-      height: 25px;
-      width: 25px;
-  }
-
-  .forecast-date {
-      font-size: 1rem;
-      font-weight: 500;
-  }
 
 
 
@@ -350,23 +313,6 @@
       --color6: 140, 100, 255;
       --circle-size: 80%;
       --blending: hard-light;
-  }
-
-  .text-container {
-      z-index: 100;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      position: absolute;
-      top: 0;
-      left: 0;
-      justify-content: center;
-      align-items: center;
-      font-size: 5rem;
-      color: white;
-      opacity: 0.8;
-      user-select: none;
-      text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
   }
 
   .gradient-bg {
