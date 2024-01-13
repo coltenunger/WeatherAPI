@@ -33,7 +33,7 @@ app.get('/get-weather', async (req, res) => {
         const weatherRaw = data.weather[0].description;
         const weatherUpper = weatherRaw.charAt(0).toUpperCase() + weatherRaw.slice(1);
         const windSpeedRaw = data.wind.speed;
-        const windSpeedRound = windSpeedRaw.toFixed(1);
+        const windSpeedRound = Math.round(windSpeedRaw);
         const formattedDate = getFormattedDate();
         const visibilityInMiles = metersToMiles(data.visibility);
         res.render("weather.ejs", {
