@@ -1,4 +1,4 @@
-# Weatherby: At Your Service
-### Built and designed by Colten Unger
+# <em>Weatherby</em>
+### Retrieve real-time weather data from any city in the world.
 
-Retrieve real-time weather data from any city in the world. Built using this using NodeJS, ExpressJS, EJS and Axios.
+A web app (hosted with AWS) that renders server-side weather data to the user. Built using this using NodeJS, ExpressJS, EJS and Axios. Front/backend design and construction by [Colten Unger](https://coltenunger.com/).

@@ -29,11 +29,6 @@
       position: absolute;
       left: 0;
       right: 0;
-      /* bottom: 0;
-      top: 0;
-      margin-left: 0;
-      margin-right: 0;
-      z-index: -1; */
       background-color: hsla(225, 92%, 40%, 1);
       background-image:
           radial-gradient(at 59% 3%, hsla(215, 100%, 53%, 1) 0px, transparent 50%),
@@ -143,8 +138,9 @@
       width: 1.3rem;
   }
 
-  .footer-info1 {
-      font-size: 14px;
+  .footer-info {
+      font-weight: 300;
+      font-size: 1rem;
       position: absolute;
       left: 20px;
       bottom: 15px;
@@ -247,6 +243,12 @@
       font-size: 1rem;
   }
 
+  .error-message {
+      font-weight: 600;
+      text-align: center;
+      font-size: 1rem;
+  }
+
   /* MEDIA QUERIES */
   @media (max-width: 768px) {
 
@@ -292,8 +294,8 @@
           transform: scale(.95);
       }
 
-      .footer-info1 {
-          font-size: 12px;
+      .footer-info {
+          font-size: .8rem;
       }
 
       .weather-wrapper {
@@ -347,8 +349,8 @@
           width: 1rem;
       }
 
-      .footer-info1 {
-          font-size: 10px;
+      .footer-info {
+          font-size: .6rem;
       }
 
       .arrow-icon {
