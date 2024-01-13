@@ -17,7 +17,7 @@
       left: 0;
       right: 0;
       display: flex;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
       flex-direction: column;
       height: 100vh;
@@ -46,10 +46,7 @@
   }
 
   .logo-container {
-      position: absolute;
-      top: 3rem;
       display: flex;
-      justify-content: start;
       flex-direction: column;
       align-items: center;
       color: black;
@@ -58,22 +55,23 @@
   .logo-header {
       display: flex;
       gap: 1rem;
-      font-size: 80px;
+      font-size: 5rem;
+  }
+
+  .logo-icon {
+      width: 5rem;
   }
 
   .tagline {
       font-weight: 200;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: white;
   }
 
   .form-flex {
-      position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      height: 100%;
-      width: 40%;
+      width: 45%;
       gap: 2rem;
   }
 
@@ -145,27 +143,19 @@
       width: 1.3rem;
   }
 
-  .result {
-      font-size: 1.5rem;
-      padding-top: 1rem;
-      padding-bottom: 2rem;
-  }
-
   .footer-info1 {
-      font-size: 16px;
+      font-size: 14px;
       position: absolute;
-      left: 1.25rem;
+      left: 20px;
       bottom: 15px;
-      z-index: 2;
   }
 
   .footer-info2 {
       color: white;
-      font-size: 12px;
+      font-size: 10px;
       position: absolute;
-      right: 1.25rem;
+      right: 20px;
       bottom: 15px;
-      z-index: 2;
   }
 
   .static-container {
@@ -178,20 +168,23 @@
 
   .arrow-container {
       position: absolute;
-      top: 1.25rem;
-      left: 1.25rem;
+      top: 20px;
+      left: 20px;
   }
 
   .arrow-icon {
-      width: inherit;
+      width: 32px;
+      height: 32px;
   }
 
   .weather-wrapper {
       display: flex;
-      /* justify-content: inherit; */
+      justify-content: inherit;
       align-items: inherit;
       flex-direction: column;
-      width: 660px;
+      width: 100%;
+      max-width: 693px;
+      min-width: 220px;
   }
 
   .header-content {
@@ -231,25 +224,19 @@
   .rectangular-box {
       display: flex;
       justify-content: space-between;
-      padding: 1rem;
       width: 100%;
-      height: 100%;
-      flex-shrink: 3;
-      height: fit-content;
       border-radius: 10px;
       background-color: black;
       color: white;
-      padding: 2.2rem 1rem 2.2rem 1rem;
   }
 
   .weather-item {
-      flex-shrink: 1;
-      /* width: 220px; */
+      width: 215px;
       display: flex;
       align-items: center;
       flex-direction: column;
-      /* padding: 1.2rem 2rem 1.2rem 2rem; */
-      margin: 1.2rem 2rem 1.2rem 2rem;
+      padding: 1rem;
+      margin: 3rem 0 3rem 0;
   }
 
   .weather-icon {
@@ -258,50 +245,185 @@
   }
 
   .info {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       font-weight: 500;
       margin-top: 2.5rem;
       margin-bottom: .5rem;
   }
 
   .criteria {
-      font-size: 1.1rem;
+      font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+
+      .logo-header {
+          font-size: 3rem;
+      }
+
+      .logo-icon {
+          width: 4rem;
+      }
+
+      .tagline {
+          font-size: 1rem;
+      }
+
+      .form-flex {
+          width: 55%;
+      }
+
+      .input-label {
+          font-size: 1.5rem;
+      }
+
+      input,
+      input::placeholder {
+          font: 1rem 'Inter', sans-serif;
+      }
+
+      .search-button {
+          font-size: 1.2rem;
+      }
+
+      .search-icon {
+          width: 1.2rem;
+      }
+
+      .search-button:hover {
+          cursor: default;
+          transform: none;
+      }
+
+      .search-button:active {
+          transform: scale(.95);
+      }
+
+      .footer-info1 {
+          font-size: 12px;
+      }
+
+      .footer-info2 {
+          font-size: 8px;
+      }
+
+      .weather-wrapper {
+          gap: 4rem;
+          max-width: 618px;
+          min-width: 206px;
+      }
+
+      .weather-item {
+          width: 206px;
+      }
+
+      .weather-icon {
+          height: 40px;
+          width: 40px;
+      }
+  }
+
+  @media (max-width: 430px) {
+
+      .logo-header {
+          font-size: 2.5rem;
+      }
+
+      .logo-icon {
+          width: 3.5rem;
+      }
+
+      .form-flex {
+          width: 70%;
+      }
+
+      .input-label {
+          font-size: 1.3rem;
+      }
+
+      .inputBox {
+          border: 1px solid white;
+      }
+
+      .search-button {
+          font-size: 1rem;
+          padding: .5rem;
+      }
+
+      .search-button:active {
+          transform: scale(0.95);
+      }
+
+      .search-icon {
+          width: 1rem;
+      }
+
+      .footer-info1 {
+          font-size: 10px;
+      }
+
+      .footer-info2 {
+          font-size: 5px;
+      }
+
+      .arrow-icon {
+          width: 28px;
+          height: 28px;
+      }
+
+      .weather-wrapper {
+          gap: 2rem;
+          max-width: 372px;
+          min-width: 124px;
+      }
+
+      .city-title {
+          font-size: 1.8rem;
+      }
+
+      .date-title {
+          font-size: 1rem;
+      }
+
+      .weather-condition {
+          font-size: 1.3rem;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+      }
+
+      .temperature {
+          font-size: 9rem;
+      }
+
+      .rectangular-box {
+          width: 100%;
+      }
+
+      .weather-item {
+          width: 124px;
+          padding: 0 1rem 0 1rem;
+          margin: 2rem 0 2rem 0;
+      }
+
+      .weather-icon {
+          height: 30px;
+          width: 30px;
+      }
+
+      .info {
+          font-size: 1rem;
+          margin-top: 1.8rem;
+          margin-bottom: .4rem;
+      }
+
+      .criteria {
+          font-size: .8rem;
+      }
   }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* Gradient CSS */
+  /* Moving Gradient Background */
   :root {
       --color-bg1: rgb(11, 74, 168);
       --color-bg2: rgb(9, 54, 121);

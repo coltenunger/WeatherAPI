@@ -3,7 +3,7 @@
     <div class="absolute-container">
         <div class="logo-container">
             <div class="logo-header">
-                Weatherby<img width="84px" src="/assets/images/WBlogo(1).svg" alt="Weatherby logo">
+                Weatherby<img class="logo-icon" src="/assets/images/WBlogo(1).svg" alt="Weatherby logo">
             </div>
             <div class="tagline">at your service</div>
         </div>
@@ -12,12 +12,12 @@
             <div class="input-group">
                 <label class="input-label" for="cityBox">City</label>
                 <input class="inputBox" type="text" placeholder="eg. Paris" name="city" value="<%=locals.cityName %>"
-                    autocomplete="off">
+                    autocomplete="off" maxlength="32">
             </div>
             <div class="input-group">
                 <label class="input-label" for="countryBox">Country</label>
                 <input class="inputBox" type="text" placeholder="eg. France" name="country"
-                    value="<%=locals.countryName %>" autocomplete="off">
+                    value="<%=locals.countryName %>" autocomplete="off" maxlength="56">
             </div>
 
             <button class="search-button" type="submit" formaction="/get-weather">
@@ -27,7 +27,6 @@
                         d="M232.49 215.51L185 168a92.12 92.12 0 1 0-17 17l47.53 47.54a12 12 0 0 0 17-17ZM44 112a68 68 0 1 1 68 68a68.07 68.07 0 0 1-68-68" />
                 </svg>
             </button>
-
         </form>
     </div>
 
