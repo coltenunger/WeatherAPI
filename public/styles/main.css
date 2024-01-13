@@ -117,6 +117,7 @@
       gap: .3rem;
       font-family: inherit;
       font-size: 1.3rem;
+
       color: white;
       background: linear-gradient(270deg, #7989DE 0%, #79E4F7 100%);
       border-radius: 30px;
@@ -334,10 +335,17 @@
 
       .inputBox {
           border: 1px solid white;
+          padding: .8rem;
+      }
+
+      input,
+      input::placeholder {
+          font: .8rem 'Inter', sans-serif;
       }
 
       .search-button {
           font-size: 1rem;
+          font-weight: 300;
           padding: .5rem;
       }
 
@@ -351,6 +359,7 @@
 
       .footer-info {
           font-size: .6rem;
+          bottom: 5px;
       }
 
       .arrow-icon {
@@ -395,6 +404,10 @@
       .weather-icon {
           height: 30px;
           width: 30px;
+      }
+
+      .temperature {
+          font-size: 8rem;
       }
 
       .info {
