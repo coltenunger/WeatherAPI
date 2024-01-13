@@ -6,7 +6,7 @@ import "dotenv/config";
 import { metersToMiles, getFormattedDate } from "./utils.js";
 
 const app = express();
-const port = 3000;
+const port = process.env.port || 3000;
 const API_KEY = process.env.API_KEY;
 
 // Using Statements
