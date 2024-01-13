@@ -1,4 +1,4 @@
-# Colten Unger
-## WeatherWebApp
+# Weatherby: At Your Service
+### Built and designed by Colten Unger
 
-Retrieve the weather using this web app. Built using this using NodeJS, ExpressJS, EJS and Axios.
+Retrieve real-time weather data from any city in the world. Built using this using NodeJS, ExpressJS, EJS and Axios.

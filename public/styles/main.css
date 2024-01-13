@@ -255,6 +255,7 @@
       font-size: 1rem;
   }
 
+  /* MEDIA QUERIES */
   @media (max-width: 768px) {
 
       .logo-header {
@@ -421,9 +422,7 @@
       }
   }
 
-
-
-  /* Moving Gradient Background */
+  /* MOVING GRADIENT BG */
   :root {
       --color-bg1: rgb(11, 74, 168);
       --color-bg2: rgb(9, 54, 121);
