@@ -335,7 +335,6 @@
 
       .inputBox {
           border: 1px solid white;
-          padding: .8rem;
       }
 
       input,
@@ -358,8 +357,7 @@
       }
 
       .footer-info {
-          font-size: .6rem;
-          bottom: 5px;
+          visibility: hidden;
       }
 
       .arrow-icon {
