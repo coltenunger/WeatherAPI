@@ -1,7 +1,7 @@
 {
-  "name": "capstone-project-2",
+  "name": "WeatherbyAppCP1.1",
   "version": "1.0.0",
-  "description": "Open Weather API",
+  "description": "Weather App using OpenWeatherAPI",
   "main": "index.js",
   "type": "module",
   "scripts": {
