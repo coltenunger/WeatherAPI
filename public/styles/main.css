@@ -150,14 +150,6 @@
       bottom: 15px;
   }
 
-  .footer-info2 {
-      color: white;
-      font-size: 10px;
-      position: absolute;
-      right: 20px;
-      bottom: 15px;
-  }
-
   .static-container {
       display: flex;
       justify-content: center;
@@ -304,10 +296,6 @@
           font-size: 12px;
       }
 
-      .footer-info2 {
-          font-size: 8px;
-      }
-
       .weather-wrapper {
           gap: 4rem;
           max-width: 618px;
@@ -361,10 +349,6 @@
 
       .footer-info1 {
           font-size: 10px;
-      }
-
-      .footer-info2 {
-          font-size: 5px;
       }
 
       .arrow-icon {

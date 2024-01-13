@@ -11,13 +11,18 @@
         <form class="form-flex" id="myForm" method="get">
             <div class="input-group">
                 <label class="input-label" for="cityBox">City</label>
-                <input class="inputBox" type="text" placeholder="eg. Paris" name="city" value="<%=locals.cityName %>"
-                    autocomplete="off" maxlength="32">
+                <input class="inputBox" type="text" placeholder="eg. New York City" name="city"
+                    value="<%=locals.cityName %>" autocomplete="off" maxlength="32">
+            </div>
+            <div class="input-group">
+                <label class="input-label" for="stateBox">State</label>
+                <input class="inputBox" type="text" placeholder="eg. NY" name="state" value="<%=locals.stateName %>"
+                    autocomplete="off" maxlength="13">
             </div>
             <div class="input-group">
                 <label class="input-label" for="countryBox">Country</label>
-                <input class="inputBox" type="text" placeholder="eg. France" name="country"
-                    value="<%=locals.countryName %>" autocomplete="off" maxlength="56">
+                <input class="inputBox" type="text" placeholder="eg. US" name="country" value="<%=locals.countryName %>"
+                    autocomplete="off" maxlength="56">
             </div>
 
             <button class="search-button" type="submit" formaction="/get-weather">
