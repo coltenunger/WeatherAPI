@@ -59,11 +59,11 @@ a {
   width: 5rem;
 }
 
-.tagline {
+/* .tagline {
   font-weight: 200;
   font-size: 1.3rem;
   color: white;
-}
+} */
 
 .form-flex {
   display: flex;
