@@ -59,12 +59,6 @@ a {
   width: 5rem;
 }
 
-/* .tagline {
-  font-weight: 200;
-  font-size: 1.3rem;
-  color: white;
-} */
-
 .form-flex {
   display: flex;
   flex-direction: column;
@@ -143,7 +137,7 @@ input {
 
 .footer-info {
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 0.75rem;
   position: absolute;
   left: 20px;
   bottom: 15px;
